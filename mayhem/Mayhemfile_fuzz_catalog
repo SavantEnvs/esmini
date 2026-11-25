@@ -1,0 +1,9 @@
+project: savantenvs/esmini
+target: fuzz_catalog
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_catalog/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_catalog
+    libfuzzer: true
+    timeout: 10

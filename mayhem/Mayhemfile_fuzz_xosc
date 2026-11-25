@@ -1,0 +1,9 @@
+project: savantenvs/esmini
+target: fuzz_xosc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_xosc/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_xosc
+    libfuzzer: true
+    timeout: 10
